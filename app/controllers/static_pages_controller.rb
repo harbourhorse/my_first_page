@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def help
+  def music
   end
 
   def about
