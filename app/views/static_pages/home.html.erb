@@ -4,7 +4,6 @@
 	<title>My first example page</title>
 
 	<meta charset="UTF-8">
-	<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
 
 
 </head>
@@ -15,21 +14,31 @@
 
 	<div class="header">
 		<div class="headerContent">
-			<h1> Viadrina </h1>
+			<div class='outherCircle'>
+			<img class='circleImage' src='../images/headerImage.psd'>
+			<div class='circleBorder'>
+			<div class='infoCircle'>
+				<h2>Content here</h2>
+				<p>content here</p>
+				<span><a href='#'>a</a>
+				</div>
+			</div>
+			</div>
+
 		</div>
-			<div class="nav">
+			<div class="navMenu">
 				<ul>
 					<li><%= link_to "Home",   '#' %></li>
 					<li><%= link_to "About us",  '#' %></li>
 					<li><%= link_to "Music",   '#' %></li>
 					<li><%= link_to "Contact",  '#' %></li>
 				</ul>
-			</div>
-			<div class="headerBreak">
-			</div>
 		
+			</div>
 	</div>
-	
+
+
+
 
 
 </body>
