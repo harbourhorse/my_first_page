@@ -3,8 +3,6 @@
 <head>
 	<title>My first example page</title>
 
-	<meta charset="UTF-8">
-
 
 </head>
 
@@ -19,7 +17,7 @@
 			<div class='circleBorder'>
 			<div class='infoCircle'>
 				<h2>Content here</h2>
-				<p>content here</p>
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut"</p>
 				<span><a href='#'>a</a>
 				</div>
 			</div>
@@ -27,17 +25,39 @@
 
 		</div>
 			<div class="navMenu">
-				<ul>
+				<ul class='mainMenu'>
 					<li><%= link_to "Home",   '#' %></li>
-					<li><%= link_to "About us",  '#' %></li>
+					<li class='navLink1'><%= link_to "About us",  '#' %>
+						<ul class='dropDownMenu'>
+							<li><%= link_to "Link 1",   '#' %></li>
+							<li><%= link_to "Link 2",   '#' %></li>
+							<li><%= link_to "Link 3",   '#' %></li>
+						</ul>
+					</li>
 					<li><%= link_to "Music",   '#' %></li>
 					<li><%= link_to "Contact",  '#' %></li>
 				</ul>
 		
 			</div>
+	
+<div class='mainContent'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel tempus metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi, in interdum massa nibh nec erat.</p>
+
+</div>
+
+
+
+<footer>
+	<div class='fixedFooter'>
+		<ul>
+			<li><img='../images/facebooklogo.png'></li>
+			<li>link 2</li>
+			<li>link 3</li>
+		</ul>
+
 	</div>
 
-
+</footer>
 
 
 

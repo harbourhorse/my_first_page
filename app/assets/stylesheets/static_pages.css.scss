@@ -11,7 +11,7 @@ body {
 }
 
 
-/* Navbar Styling */
+/* Header Navbar Styling */
 
 .navMenu {
 	width: 100%;
@@ -21,39 +21,76 @@ body {
 	opacity: 0.5;
 	filter:alpha(opacity=50);
 	box-shadow: 0 0 2em black;
+}
 	
-	ul {
-		height: 50px;
-		width: 820px;
-		margin: 0 auto;
+.mainMenu {
+	height: 50px;
+	width: 820px;
+	margin: 0 auto;
 		
-
-
-	 	li {
-			list-style-type: none;
-			width: 150px; 
-			float: left;
-			margin: 0 20px 0 20px;
+	li {
+		list-style-type: none;
+		width: 150px; 
+		float: left;
+		padding: 0 20px 0 20px;
+		text-align: center;
 			
-			a {
-				width: 150px;
-				text-decoration: none;
-				color: white;
-				line-height: 50px;
-				display: block;
-				text-align: center;
+		a {
+			width: 150px;
+			text-decoration: none;
+			color: white;
+			line-height: 50px;
+			display: block;
+			
 
-				&:hover {
-					background-color: gray;
-					transition: width 0.45s, height 0.45s, background-color 0.45s, transform 0.45s;
-					opacity: 0.9;
-				}
+			&:hover {
+				background-color: gray;
+				transition: width 0.45s, height 0.45s, background-color 0.45s, transform 0.45s;
+				opacity: 0.9;
+				filter:alpha(opacity=90)
 			}
 		}
 	}
 }
 
-/* Header Content */
+.dropDownMenu li {
+	text-align: center;
+	padding: 0;
+	background-color: black;
+	display: none;
+	z-index: 1;
+}
+
+/* Footer Navbar */
+
+.fixedFooter {
+	width: 100%;
+	position: fixed;
+	height: 50px;
+	bottom: 0;
+	background-color: white;
+
+		ul {
+			position: relative;
+			float: right;
+			width: 200px;
+			height: 50px;
+			bottom: 10px;
+			right: 10px;
+			li {
+				list-style-type: none;
+				width: 150px; 
+				float: right;
+				padding: 0 20px 0 20px;
+				text-align: center;
+
+			}
+		}
+}
+
+
+
+/* Header Photo */
 
 .headerContent {
 	margin: 20px auto;
@@ -70,11 +107,11 @@ body {
 }
 
 .outherCircle {
+	position: relative;
 	overflow: hidden;
 	border-radius: 50%;
 	width: 250px;
 	height: 250px;
-	position: relative;
 }
 
 .circleBorder {
@@ -86,6 +123,7 @@ body {
 	top: 50%;
 	left: 50%;
 	margin: -125px 0 0 -125px;
+	box-shadow: inset 0.3em 0.3em 0.9em black;
 
 }
 
@@ -105,4 +143,20 @@ body {
 .outherCircle:hover .infoCircle {
 	transition: all 0.5s ease-in-out;
 	left: 50%;
+}
+
+
+/* Main Content */
+
+.mainContent {
+	position: absolute;
+	height: 1500px;
+	background-color: gray;
+	right: 10%;
+	left: 10%;
+	opacity: 0.2;
+	z-index: -1;
+	box-shadow: inset 0.3em 0.3em 0.9em black;
+
+
 }
