@@ -5,10 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  <script type='text/javascript'>showContent()</script>
 </head>
 <body>
+	<%= render "layouts/header" %>
+	
+	<div id='page1'>
+		<a id='home' class='smooth'></a>
+			<%= yield %>
+	</div>
 
-<%= yield %>
+	<div id='page2'>
+  		<a id="interests" class="smooth"></a>
+    		<%= yield %>
+	</div>
 
+
+	<div id='page3'>
+  		<a id="contact" class="smooth"></a>
+    		<%= yield %>
+	</div>
+	
+	<%= render "layouts/footer" %>
 </body>
 </html>

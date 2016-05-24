@@ -25,6 +25,24 @@ $(document).ready(function() {
 })
 });
 
+// Body Div //
+
+$(document).ready(function() {
+	$('.mainContent').slideDown(700);
+});
+
+
+// Animate text //
+
+$(document).ready(function() {
+	$('.animateText').textillate({
+		in: { effect: 'flipInX', delay:2},
+	});
+});
+
+$(document).ready(function() {
+	$('.line').hide().animate({width: 'toggle'}, 1000);
+});
 
 // Clock //
 
@@ -57,3 +75,15 @@ var year = today.getFullYear();
 
 document.getElementById('copyright').innerHTML = '<p>Copyright © Konrad Slazyk ' + year + '</p>' ;
 };
+
+// Smooth Scroll //
+
+$('.smooth').on('click', function() {
+    $.smoothScroll({
+        scrollElement: $('body'),
+        scrollTarget: '#' + this.id
+    });
+    
+    return false;
+});
+

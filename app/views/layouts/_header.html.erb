@@ -1,0 +1,31 @@
+<div class="header">
+		<div class="headerContent">
+			<div class='outherCircle'>
+			<img class='circleImage' src='../images/headerImage.psd'>
+			<div class='circleBorder'>
+			<div class='infoCircle'>
+				<h2>Konrad Ślazyk</h2>
+				<p>Web Developer</p>
+				<p>Nationality: Polish</p>
+				<p>Year of Birth: 1988</p>
+				</div>
+			</div>
+			</div>
+
+		</div>
+			<div class="navMenu">
+				<ul class='mainMenu'>
+					<li><%= link_to "Home",   root_path %></li>
+					<li class='navLink1'><%= link_to "About me",  '#' %>
+						<ul class='dropDownMenu'>
+							<li><%= link_to "Skills",   skills_path %></li>
+							<li><%= link_to "Education",   education_path %></li>
+							<li><%= link_to "Interests",   '#interests' %></li>
+							
+						</ul>
+					</li>
+					<li><%= link_to "Music",   'https://soundcloud.com/viadrina' %></li>
+					<li><%= link_to "Contact",  '#contact' %></li>
+				</ul>
+		
+			</div>

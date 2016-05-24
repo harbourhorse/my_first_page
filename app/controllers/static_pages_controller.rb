@@ -2,12 +2,19 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def contact
+  def about
   end
 
   def music
   end
 
-  def about
+  def contact
   end
+
+  def skills
+  end
+
+  def education
+  end
+
 end
