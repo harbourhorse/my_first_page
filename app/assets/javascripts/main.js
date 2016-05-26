@@ -10,17 +10,14 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 	var navOffset = $('.navMenu').offset().top;
-	
-	$('.navMenu').wrap('<div class="navHeight"></div>');
-	$('.navHeight').height($('.navMenu').outerHeight);
 
 	$(window).scroll(function() {
 	var scrollPos = $(window).scrollTop();
 
 	if (scrollPos >= navOffset) {
-		$('.navMenu').addClass('fixed');
+		$('body').addClass('navbar-fixed');
 	} else {
-		$('.navMenu').removeClass('fixed');
+		$('body').removeClass('navbar-fixed');
 	}
 })
 });
@@ -83,7 +80,7 @@ $('.smooth').on('click', function() {
         scrollElement: $('body'),
         scrollTarget: '#' + this.id
     });
-    
+
     return false;
 });
 
