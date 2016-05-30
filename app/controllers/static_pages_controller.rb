@@ -8,13 +8,19 @@ class StaticPagesController < ApplicationController
   def music
   end
 
-  def contact
-  end
-
   def skills
   end
 
   def education
+  end
+
+  def interests
+  end
+
+  def viadrinacovers
+  end
+
+  def contact
   end
 
 end

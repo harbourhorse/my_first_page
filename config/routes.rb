@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'skills'  => 'static_pages#skills'
   get 'education'  => 'static_pages#education'
+  get 'interests'  => 'static_pages#interests'
+  get 'viadrinacovers'  => 'static_pages#viadrinacovers'
   
   get 'music'   => 'static_pages#music'
   get 'contact' => 'static_pages#contact'

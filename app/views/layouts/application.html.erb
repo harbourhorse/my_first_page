@@ -11,21 +11,9 @@
 <body>
 	<%= render "layouts/header" %>
 	
-	<div id='page1'>
-		<a id='home' class='smooth'></a>
+	
 			<%= yield %>
-	</div>
-
-	<div id='page2'>
-  		<a id="interests" class="smooth"></a>
-    		<%= yield %>
-	</div>
-
-
-	<div id='page3'>
-  		<a id="contact" class="smooth"></a>
-    		<%= yield %>
-	</div>
+	
 	
 	<%= render "layouts/footer" %>
 </body>

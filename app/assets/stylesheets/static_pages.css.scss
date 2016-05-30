@@ -19,13 +19,13 @@
 }
 
 .navMenu {
-	width: 780px;
+	-moz-box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
 	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
 	height: 50px;
 	margin: 0 auto;
-	-webkit-box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
-	-moz-box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
-	box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
+	width: 780px;
 	
 }
 	
@@ -60,8 +60,9 @@
 }
 
 .dropDownMenu {
-	position: relative;
+	position: absolute;
 	z-index: 100;
+	width: 150px;
 	li {
 		text-align: center;
 		padding: 0;
@@ -86,6 +87,7 @@
 		float: right;
 		color: white;
 		padding: 8px 10px 10px 0;
+		
 
 	}
 }
@@ -179,7 +181,7 @@ body {
 .bodyHeader {
 	
 	height: 50px;
-	width: 778px;
+	width: 780px;
 	text-align: center;
 	background-color: rgba(120, 124, 126, 0.8);
 	margin: 30px auto 0 auto;
@@ -187,7 +189,6 @@ body {
 	-moz-box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 	z-index: -1;
-	border: 1px solid;
 	h2 {
 		position: absolute;
 		line-height: 200%;
@@ -215,6 +216,7 @@ body {
 	-webkit-box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+	text-align: center;
  	p {
 		line-height: 200%;
 		color: white;
@@ -223,28 +225,56 @@ body {
 	}
 }
 
-
-.skills li {
-	line-height: 200%;
-	color: white;
-	font-family: 'Open Sans', Arial, sans-serif;
-	text-align: left;
-	padding-left: 10px;
-
+#educationTable {
+	
+	width: 100%;
+	margin: 0 auto;
+    text-align: left;
+    line-height: 200%;
+    border-collapse: collapse;
+    color: white;
+    ul {
+    	list-style-type: none;
+    }
 }
 
 
-/* One site Page */
-
-
-#page1 {
-	height: 1000px;
+td {
+	padding: 20px;
+	display: table-cell;
+	vertical-align: baseline;
 }
 
-#page2 {
-	height: 1000px;
+.schoolColumn {
+	float: left;
 }
 
-#page3 {
-	height: 1000px;
+.yearColumn {
+	text-align: right;
+	float: right;
+}
+
+
+
+.skills {
+	list-style-position: inside;
+	li {
+		line-height: 200%;
+		color: white;
+		font-family: 'Open Sans', Arial, sans-serif;
+		text-align: left;
+		padding-left: 10px;
+		text-indent: -1em;
+	}
+}
+
+/* Photos */
+
+.imgMin {
+	
+	width: 250px;
+	height: 250px;
+	-webkit-box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 }
