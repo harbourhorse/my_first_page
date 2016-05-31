@@ -31,6 +31,9 @@ $(document).ready(function() {
 	$('.mainContent').slideDown(700);
 });
 
+$(document).ready(function() {
+	$('.mainContentImg').slideDown(700);
+});
 
 // Animate text //
 
@@ -76,4 +79,16 @@ var year = today.getFullYear();
 document.getElementById('copyright').innerHTML = '<p>Copyright © Konrad Slazyk ' + year + '</p>' ;
 };
 
+// Img //
 
+$(document).ready(function(){
+	$('.lightbox').click(function(){
+
+
+		$('.backdrop, .box').animate({'opacity':'0.5'}, 300, 'linear');
+		$('.box').animate({'opacity':'1.00'}, 300, 'linear')
+		$('.backdrop, .box').css('display', 'block');
+
+		
+	})
+})
