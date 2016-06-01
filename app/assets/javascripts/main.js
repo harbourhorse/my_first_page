@@ -92,11 +92,6 @@ $(document).ready(function(){
 		$('.backdrop, .box').css('display', 'block');
 		$('.box').html('<img src="' + src + '" />');
 	});
-	$('.box::after').click(function(){
-		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
-			$('.backdrop, .box').css('display', 'none');
-		});
-	});
 	$('.backdrop').click(function(){
 		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
 			$('.backdrop, .box').css('display', 'none');
