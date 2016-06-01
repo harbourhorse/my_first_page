@@ -283,6 +283,7 @@ td {
 
 /* Photos */
 
+
 .imgMin {
 
 	width: 250px;
@@ -308,27 +309,34 @@ td {
 
 .box {
 	position: fixed;
-	top: 20%;
+	top: 25%;
 	left: 30%;
-	width: 500px;
-	height: 500px;
+	width: 650px;
+	height: 650px;
 	background: #ffffff;
 	z-index: 51;
-	padding: 10px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	
+	
 	-moz-box-shadow: 0 0 5px #444444;
 	-webkit-box-shadow: 0 0 5px #444444;
 	box-shadow: 0 0 5px #444444;
-	display: none;
 	color: black;
 	font-size: medium;
 	letter-spacing: normal;
+	display: none;	
+	img {
+		max-width: 100%;
+    	max-height: 100%;
+	}
 }
 
 .close {
+	color: black;
+	font-size: medium;
+	letter-spacing: normal;
+	content: "X";
 	float: right;
-	margin-right: 6px;
 	cursor: pointer;
+	top: 2px;
+	right: 5px;
 }

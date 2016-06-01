@@ -82,13 +82,24 @@ document.getElementById('copyright').innerHTML = '<p>Copyright © Konrad Slazyk 
 // Img //
 
 $(document).ready(function(){
-	$('.lightbox').click(function(){
+	$('.lightbox').click(function(event){
 
-
-		$('.backdrop, .box').animate({'opacity':'0.5'}, 300, 'linear');
-		$('.box').animate({'opacity':'1.00'}, 300, 'linear')
-		$('.backdrop, .box').css('display', 'block');
-
+		event.preventDefault();
+		var src = $(event.target).attr('src');
 		
+		$('.backdrop, .box').animate({'opacity':'.50'}, 300, 'linear');
+		$('.box').animate({'opacity':'1.00'}, 200, 'linear');
+		$('.backdrop, .box').css('display', 'block');
+		$('.box').html('<img src="' + src + '" />');
+	});
+	$('.box::after').click(function(){
+		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
+			$('.backdrop, .box').css('display', 'none');
+		});
+	});
+	$('.backdrop').click(function(){
+		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
+			$('.backdrop, .box').css('display', 'none');
+		});
 	})
-})
+});
