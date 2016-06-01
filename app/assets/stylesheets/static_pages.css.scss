@@ -1,55 +1,66 @@
 /* global styling */
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
-// *, *:before, *:after {
-// 	box-sizing: border-box;
-// }
+
+
 
 /* Header Navbar Styling */
-.navMenu {
-	background-color: rgba(0, 0, 0, 0.5);
-	box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
-	height: 50px;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 780px;
-	margin: 0 auto;
 
-	.navbar-fixed & {
-		position: fixed;
-		z-index: 100;
-	}
+.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	right: 25%;
+	left: 25%;
 }
 
 .navMenuWrapper {
 	position: relative;
+
+}
+.navMenu {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: 6px 15px 300px -7px rgba(0,0,0,0.75);
+	height: 50px;
+	margin: 0 auto;
+	width: 780px;
+	right: 0;
+	left: 0;
+	.navbar-fixed & {
+ 		position: fixed;
+		z-index: 100;
+		top: 0;
+		right: 25%;
+		left: 25%;
+	}
+	
 }
 
 .mainMenu {
 	height: 50px;
 	width: 780px;
-
-
+	
+		
 	li {
-		float: left;
 		list-style-type: none;
-		margin: 0 auto;
+		width: 150px; 
+		float: left;
 		padding: 0 20px 0 20px;
 		text-align: center;
-		width: 150px;
-
+		margin: 0 auto;
+			
 		a {
 			width: 150px;
 			text-decoration: none;
 			color: white;
 			line-height: 50px;
 			display: block;
-
+			
 
 			&:hover {
 				background-color: black;
@@ -61,15 +72,15 @@
 }
 
 .dropDownMenu {
-	position: relative;
+	position: absolute;
 	z-index: 100;
-
+	width: 150px;
 	li {
 		text-align: center;
 		padding: 0;
 		background-color: rgba(0, 0, 0, 0.6);
 		display: none;
-
+	
 	}
 }
 
@@ -81,12 +92,14 @@
 	height: 30px;
 	bottom: 0;
 	left: 0;
-	background: rgba(0,0,0,0.5);
-
+	background-color: black;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
 	p {
 		float: right;
 		color: white;
 		padding: 8px 10px 10px 0;
+		
 
 	}
 }
@@ -125,29 +138,29 @@
 }
 
 .circleBorder {
+	position: absolute;
 	border-radius: 50%;
-	border: 25px solid rgba(150, 153, 166, 0.5);
+	width: 200px;
 	height: 200px;
+	border: 25px solid rgba(150, 153, 166, 0.5);
+	top: 50%;
 	left: 50%;
 	margin: -125px 0 0 -125px;
-	position: absolute;
-	top: 50%;
-	width: 200px;
-
+	
 
 }
 
 .infoCircle {
+	position: absolute;
 	background: rgba(150, 153, 166, 0.5);
 	border-radius: 50%;
+	width: 200px;
 	height: 200px;
+	transition: all 0.5s ease-in-out;
+	top: 50%;
 	left: -250px;
 	margin: -100px 0 0 -100px;
-	position: absolute;
 	text-align: center;
-	top: 50%;
-	transition: all 0.5s ease-in-out;
-	width: 200px;
 	h2 {
 		padding: 15px;
 		color: white;
@@ -172,21 +185,20 @@
 
 body {
 	font-family: 'Open Sans', Arial, sans-serif;
-	background: url('../images/homeworld8-1920x1080.jpg') repeat;
-	background-size: contain;
+	background-image: url('../images/homeworld8-1920x1080.jpg');
+
 }
 
 
 .bodyHeader {
+	
 	height: 50px;
-	width: 778px;
+	width: 780px;
 	text-align: center;
 	background-color: rgba(120, 124, 126, 0.8);
 	margin: 100px auto 0 auto;
 	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
 	z-index: -1;
-	border: 1px solid;
-
 	h2 {
 		position: absolute;
 		line-height: 200%;
@@ -209,9 +221,9 @@ body {
 	width: 700px;
 	background-color: rgba(120, 124, 126, 0.8);
 	padding: 40px;
-	z-index: -1;
 	margin: 35px auto;
 	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+	text-align: center;
  	p {
 		line-height: 200%;
 		color: white;
@@ -220,26 +232,103 @@ body {
 	}
 }
 
+.mainContentImg {
+	font-size: 0;
+	letter-spacing: -1px;
+	display: none;
+	height: 34%;
+	width: 700px;
+	background-color: rgba(120, 124, 126, 0.8);
+	padding: 40px;
+	margin: 35px auto;
+	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+	text-align: center;
+}
 
-.skills li {
-	line-height: 200%;
-	color: white;
-	font-family: 'Open Sans', Arial, sans-serif;
-	text-align: left;
-	padding-left: 10px;
-
+#educationTable {
+	width: 100%;
+	margin: 0 auto;
+    text-align: left;
+    line-height: 200%;
+    border-collapse: collapse;
+    color: white;
+    ul {
+    	list-style-type: none;
+    }
 }
 
 
-/* One site Page */
-#page1 {
-	height: 1000px;
+td {
+	padding: 20px;
+	display: table-cell;
+	vertical-align: baseline;
 }
 
-#page2 {
-	height: 1000px;
+.schoolColumn {
+	float: left;
 }
 
-#page3 {
-	height: 1000px;
+.yearColumn {
+	text-align: right;
+	float: right;
 }
+
+
+
+.skills {
+	list-style-position: inside;
+	li {
+		line-height: 200%;
+		color: white;
+		font-family: 'Open Sans', Arial, sans-serif;
+		text-align: left;
+		padding-left: 10px;
+		text-indent: -1em;
+	}
+}
+
+/* Photos */
+
+
+.imgMin {
+
+	width: 250px;
+	height: 250px;
+	box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+}
+
+
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .0;
+	filter: alpha(opacity=0);
+	z-index: 50;
+	display: none;
+}
+
+.box {
+	position: fixed;
+	top: 25%;
+	left: 30%;
+	width: 650px;
+	height: 650px;
+	background: #ffffff;
+	z-index: 51;
+	-moz-box-shadow: 0 0 5px #444444;
+	-webkit-box-shadow: 0 0 5px #444444;
+	box-shadow: 0 0 5px #444444;
+	color: black;
+	font-size: medium;
+	letter-spacing: normal;
+	display: none;	
+	img {
+		max-width: 100%;
+    	max-height: 100%;
+	}
+}
+

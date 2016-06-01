@@ -28,12 +28,15 @@ $(document).ready(function() {
 	$('.mainContent').slideDown(700);
 });
 
+$(document).ready(function() {
+	$('.mainContentImg').slideDown(700);
+});
 
 // Animate text //
 
 $(document).ready(function() {
 	$('.animateText').textillate({
-		in: { effect: 'flipInX', delay:2},
+		in: { effect: 'flipInX', delay:1.5},
 	});
 });
 
@@ -73,14 +76,22 @@ var year = today.getFullYear();
 document.getElementById('copyright').innerHTML = '<p>Copyright © Konrad Slazyk ' + year + '</p>' ;
 };
 
-// Smooth Scroll //
+// Img //
 
-$('.smooth').on('click', function() {
-    $.smoothScroll({
-        scrollElement: $('body'),
-        scrollTarget: '#' + this.id
-    });
+$(document).ready(function(){
+	$('.lightbox').click(function(event){
 
-    return false;
+		event.preventDefault();
+		var src = $(event.target).attr('src');
+		
+		$('.backdrop, .box').animate({'opacity':'.50'}, 300, 'linear');
+		$('.box').animate({'opacity':'1.00'}, 200, 'linear');
+		$('.backdrop, .box').css('display', 'block');
+		$('.box').html('<img src="' + src + '" />');
+	});
+	$('.backdrop').click(function(){
+		$('.backdrop, .box').animate({'opacity':'0'}, 300, 'linear', function(){
+			$('.backdrop, .box').css('display', 'none');
+		});
+	})
 });
-
