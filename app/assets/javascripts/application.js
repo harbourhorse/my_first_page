@@ -15,5 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+// Vendor Files
+//= require jquery.lettering-0.6.1.min.js
+//= require jquery.textillate.js
+//= require jquery.lettering.js
 

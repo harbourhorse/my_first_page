@@ -13,4 +13,6 @@
  *= require_tree .
  *= require normalize
  *= require_self
+ *= require animate.min.css
+ *= require normalize.css
  */
