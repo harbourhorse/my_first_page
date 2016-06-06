@@ -39,7 +39,7 @@ gem 'autoprefixer-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3', '1.3.9'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -51,7 +51,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+  gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
 
