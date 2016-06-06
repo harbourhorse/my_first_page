@@ -1,0 +1,23 @@
+/* Footer Navbar */
+
+.footerDivider {
+  width: 100%;
+  position: fixed;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+
+  p {
+    float: right;
+    color: white;
+    padding: 8px 10px 10px 0;
+  }
+}
+
+#clock {
+  float: left;
+  color: white;
+  padding: 8px 0 10px 10px;
+}

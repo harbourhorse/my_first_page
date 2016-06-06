@@ -1,32 +1,30 @@
 <header>
-		<div class="headerContent">
-			<div class='outherCircle'>
-				<img class='circleImage' src='/assets/headerImage.png'>
-					<div class='circleBorder'>
-						<div class='infoCircle'>
-							<h2>Konrad Ślazyk</h2>
-								<p>Web Developer</p>
-								<p>Nationality: Polish</p>
-								<p>Year of Birth: 1988</p>
-						</div>
-					</div>
-			</div>
-		</div>
-			
-			<div class="navMenu">
-				<ul class='mainMenu'>
-					<li><%= link_to "Home",   root_path %></li>
-					<li class='navLink1'><%= link_to "About me",  '#' %>
-						<ul class='dropDownMenu'>
-							<li><%= link_to "Skills",   skills_path %></li>
-							<li><%= link_to "Education",   education_path %></li>
-							<li><%= link_to "Interests",   interests_path %></li>
-							<li><%= link_to "Viadrina Covers", viadrinacovers_path %></li>
-						</ul>
-					</li>
-					<li><%= link_to "Music",   'https://soundcloud.com/viadrina' %></li>
-					<li><%= link_to "Contact",  contact_path %></li>
-				</ul>
-		</div>
-</header>>
-
+  <div class="headerContent">
+    <div class='outherCircle'>
+      <img class='circleImage' src='/assets/headerImage.png'>
+        <div class='circleBorder'>
+          <div class='infoCircle'>
+            <h2>Konrad Ślazyk</h2>
+              <p>Web Developer</p>
+              <p>Nationality: Polish</p>
+              <p>Year of Birth: 1988</p>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="navMenu">
+    <ul class='mainMenu'>
+      <li><%= link_to "Home", root_path, {:class => "mainMenu__link"} %></li>
+      <li class='mainMenu__link--dropdown'><%= link_to "About me", '#', {:class => "mainMenu__link"} %>
+        <ul class='dropDownMenu'>
+          <li><%= link_to "Skills", skills_path, {:class => "dropDownMenu__item"} %></li>
+          <li><%= link_to "Education",   education_path, {:class => "dropDownMenu__item"} %></li>
+          <li><%= link_to "Interests",   interests_path, {:class => "dropDownMenu__item"} %></li>
+          <li><%= link_to "Viadrina Covers", viadrinacovers_path, {:class => "dropDownMenu__item"} %></li>
+        </ul>
+      </li>
+      <li><%= link_to "Music", 'https://soundcloud.com/viadrina', {:class => "mainMenu__link"} %></li>
+      <li><%= link_to "Contact", contact_path, {:class => "mainMenu__link"} %></li>
+    </ul>
+  </div>
+</header>

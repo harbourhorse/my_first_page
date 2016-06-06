@@ -1,0 +1,181 @@
+/* global styling */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+/* Main Content */
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: url('/assets/homeworld8-1920x1080.jpg') no-repeat fixed;
+  background-size: cover;
+
+}
+
+.bodyHeader {
+  height: 50px;
+  width: 780px;
+  text-align: center;
+  background-color: rgba(120, 124, 126, 0.8);
+  margin: 100px auto 0 auto;
+  box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+
+  h2 {
+    position: absolute;
+    line-height: 200%;
+    color: white;
+    left: 25%;
+    right: 25%;
+  }
+}
+
+.line {
+  border: 1px solid white;
+  width: 674px;
+  margin: 10px;
+}
+
+.mainContent {
+  height: 34%;
+  width: 780px;
+  background-color: rgba(120, 124, 126, 0.8);
+  padding: 40px;
+  margin: 35px auto;
+  box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+  text-align: center;
+
+  p {
+    line-height: 200%;
+    color: white;
+    text-align: left;
+    margin: 10px;
+  }
+}
+
+.lightboxWrapper {
+  width: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  a {
+    float: left;
+    display: block;
+    width: 50%;
+    height: 250px;
+  }
+}
+
+.mainContentImg {
+  width: 780px;
+  background-color: rgba(120, 124, 126, 0.8);
+  padding: 40px;
+  margin: 35px auto;
+  box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+  text-align: center;
+
+  p {
+    line-height: 2em;
+    color: white;
+    margin: 10px;
+  }
+}
+
+.educationTable {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 200%;
+  color: white;
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+td {
+  padding: 20px;
+}
+
+.schoolColumn {
+  float: left;
+}
+
+.yearColumn {
+  text-align: right;
+  float: right;
+}
+
+.skills {
+  list-style-position: inside;
+
+  li {
+    line-height: 200%;
+    color: white;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: left;
+    padding-left: 10px;
+    text-indent: -1em;
+  }
+}
+
+/* Photos */
+
+.imgMin {
+  width: 250px;
+  height: 250px;
+  box-shadow: 6px 15px 72px 0px rgba(0,0,0,0.75);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  z-index: 50;
+  visibility: hidden;
+  transition: opacity 0.30s;
+
+  &.visible {
+    cursor: pointer;
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
+
+.box {
+  position: fixed;
+  left: calc(50% - (650px / 2));
+  top: calc(50% - (650px / 2));
+  width: 650px;
+  height: 650px;
+  background: #ffffff;
+  z-index: 51;
+  box-shadow: 0 0 5px #444444;
+  color: black;
+  font-size: 500;
+  visibility: hidden;
+  opacity: 0;
+
+  &.visible {
+    transition: opacity 0.3s;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
