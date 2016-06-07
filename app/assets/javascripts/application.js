@@ -19,4 +19,5 @@
 //= require jquery.lettering-0.6.1.min.js
 //= require jquery.textillate.js
 //= require jquery.lettering.js
+//= require jquery-migrate-1.2.1.js
 
