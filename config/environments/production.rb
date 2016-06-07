@@ -25,7 +25,7 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.precompile += %w( timeline.js )
   # Compress JavaScripts and CSS.
-  config.assets.compress = true
+  config.assets.compress = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
